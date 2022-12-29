@@ -1,8 +1,12 @@
 package application
 
+import org.springframework.stereotype.Service
+
+@Service
 class ChangeAnimalName {
 
-    fun execute(animalName: String) {
-        TODO("Not yet implemented")
+    fun execute(animalCommand: AnimalCommand, expectedName: String): AnimalCommand {
+        animalCommand.name = expectedName
+        return animalCommand
     }
 }
